@@ -19,11 +19,6 @@ htmlcov/
 .git/
 .gitignore
 
-# Environment variables and secrets
-.env
-.env.*
-!.env.example
-
 # IDE files
 .vscode/
 .idea/
