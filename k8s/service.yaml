@@ -1,0 +1,20 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-fastapi-service
+  namespace: student-fastapi
+  labels:
+    app: student-fastapi
+
+spec:
+  type: ClusterIP
+
+  selector:
+    app: student-fastapi
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
