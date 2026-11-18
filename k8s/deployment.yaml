@@ -23,7 +23,7 @@ spec:
 
           image: 654691200479.dkr.ecr.ap-south-1.amazonaws.com/fastapi/studentmanagement:v2
 
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8000
