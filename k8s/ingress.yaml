@@ -1,6 +1,6 @@
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
+
 metadata:
   name: student-fastapi-ingress
   namespace: student-fastapi
@@ -9,7 +9,8 @@ spec:
   ingressClassName: nginx
 
   rules:
-    - http:
+    - host: k8s-nginxing-nginxing-020a784e82-085cf7a455e57256.elb.ap-south-1.amazonaws.com
+      http:
         paths:
           - path: /
             pathType: Prefix
