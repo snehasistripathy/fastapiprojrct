@@ -1,5 +1,6 @@
 from contextlib import asynccontextmanager
 
+from app.schemas.student import CICDTestRequest
 from fastapi import FastAPI
 
 from app.core.config import (
@@ -53,6 +54,17 @@ def root():
     return {
         "message": "Welcome to Student Management API",
         "status": "running"
+    }
+@app.post("/cicd-test")
+async def cicd_test(data: CICDTestRequest):
+
+    return {
+        "message": "CI/CD deployment successful!",
+        "received_data": {
+            "message": data.message,
+            "version": data.version
+        },
+        "status": "success"
     }
 
 

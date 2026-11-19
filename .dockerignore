@@ -26,6 +26,7 @@ htmlcov/
 # Git
 .git/
 .gitignore
+.github
 
 # IDE files
 .vscode/

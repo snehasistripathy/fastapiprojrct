@@ -65,3 +65,6 @@ class StudentResponse(BaseModel):
     model_config = ConfigDict(
         from_attributes=True
     )
+class CICDTestRequest(BaseModel):
+    message: str
+    version: str
